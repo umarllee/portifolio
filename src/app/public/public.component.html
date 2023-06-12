@@ -1,0 +1,77 @@
+<!-- <mat-sidenav-container>
+    <mat-sidenav mode="side" #sidenav [opened]='isNavMenusOpen'>
+      <div [@slideInOut]="menuState" class="asideMain pb-4" style="box-shadow: rgb(0 0 0 / 52%) 3px 0px 8px; border-right: 3px solid #6495ed;
+      border-top: 3px solid #6495ed;">
+        <div class="closeHamburger" [attr.disabled]="true" (click)="sidenavClose()">
+          <svg  [ngClass]="{'hamburgerIcon': !isNavIn, 'hamburgerIcon-otherside': isNavIn}"
+            xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+            class="bi bi-arrow-left-circle mt-4" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+          </svg>
+        </div> 
+        <div class="brandLogo mt-3 ">
+          <h2 class="title"> UFS V.1 </h2>
+        </div>
+        <div class="sidebarMenu sideCotainer pb-4 ">
+          <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="ps-3">
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding routerLinkActive="router-link-active"
+              [routerLink]="[node.url]" routerLinkActive="activeLink" (click)="openSideModule(node.moduleName)">
+              {{node.moduleName}}
+            </mat-tree-node>
+            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle
+              [attr.aria-label]="'Toggle ' + node.title">
+  
+              {{node.moduleName}} 
+  
+              <svg *ngIf="!treeControl.isExpanded(node)"
+                style="color: #146F90; margin-left: 2% !important; margin-top: 1%;" xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path
+                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+              </svg>
+  
+              <svg *ngIf="treeControl.isExpanded(node)"
+                style="color: #146F90; margin-left: 2% !important; margin-top: 1%;" xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path
+                  d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+              </svg>
+            </mat-tree-node>
+  
+  
+          </mat-tree>
+        </div>
+      </div>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+
+  <div class="header-component ">
+    <div class="head d-flex justify-content-between ">
+      <div class="col-lg-4 " style="cursor: pointer; " >
+        <div class="pageTitle fw-bolder">
+            Gulchohra Umarli
+        </div>
+      </div>
+
+      <div class="col-lg-3" style="cursor: pointer;color: cornflowerblue !important;" >
+        <div class="pageTitle d-flex justify-content-end">
+            Gulchohra Umarli
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <main class="main">
+    <div>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </main>

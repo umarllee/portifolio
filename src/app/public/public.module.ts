@@ -22,7 +22,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox'; 
 import { MatSelectModule } from '@angular/material/select';
 import { MatRippleModule } from '@angular/material/core';
-import { MatTooltipModule } from '@angular/material/tooltip'; 
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from '../app-routing.module';
 import { MatChipsModule } from '@angular/material/chips';
@@ -34,6 +33,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import { HomeComponent } from './home/home.component';
 import { WorksComponent } from './works/works.component';
 import { SkillsComponent } from './skills/skills.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -68,13 +68,14 @@ import { SkillsComponent } from './skills/skills.component';
     MatAutocompleteModule,
     AppRoutingModule,
     MatRippleModule,
-    MatTooltipModule,
     MatChipsModule,
     DragDropModule,
     MatRadioModule,
     RouterModule,
     HttpClientModule,
     MatTreeModule,
+    MatTooltipModule,
+    BrowserAnimationsModule,
   ]
 })
 export class PublicModule { }

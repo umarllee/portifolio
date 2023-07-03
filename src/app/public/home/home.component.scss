@@ -1,9 +1,36 @@
 .common-container {
-    height: 74vh;
-    width: 95%;
-    margin: 88px 0 0 0;
-    position: absolute;
-    background: red; 
+    height: 84vh;
+    align-items: center;
+    // width: 95%;
+    // position: absolute;
+    // background: #fff; 
+}
+
+.container-item {
+    border-radius: 8px;
+}
+
+.container-item2 {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+}
+
+.list-container{
+    margin: 0;
+    list-style: none;
+    background: white;
+    border-radius: 8px;
+}
+
+.list-items{
+    cursor: pointer;
+    padding: 10px ;
+    color: #424242
+}
+
+.router-link-active{
+    color: darkorange;
 }
 
 // .name {
@@ -54,3 +81,9 @@
 //     border-radius: 3px;
 // }
 
+
+
+.imgLogo {
+    height: 70%;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 99%, 0 90%);
+}

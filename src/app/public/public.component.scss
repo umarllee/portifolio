@@ -191,11 +191,15 @@
 }
 
 .main-item {
-  height: 68%;
-  padding: 101px 25px 15px 25px;
-  background-image: url(../../assets/bg4.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 100%;
+  padding: 25px;
+  // background-image: url(../../assets/bg4.png);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  background: #1D976C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   position: relative;
 }
 

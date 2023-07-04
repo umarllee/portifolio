@@ -1,5 +1,5 @@
 .common-container {
-    height: 84vh;
+    height: 86vh;
     align-items: center;
     // width: 95%;
     // position: absolute;
@@ -8,6 +8,7 @@
 
 .container-item {
     border-radius: 8px;
+    
 }
 
 .container-item2 {
@@ -26,11 +27,11 @@
 .list-items{
     cursor: pointer;
     padding: 10px ;
-    color: #424242
+    color: #7f7f7f;
 }
 
 .router-link-active{
-    color: darkorange;
+    color: #00bd58;
 }
 
 // .name {

@@ -8,7 +8,7 @@ import { WorksComponent } from './public/works/works.component';
 import { ContactComponent } from './public/contact/contact.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home/about', pathMatch: 'full' },
 
   {
     runGuardsAndResolvers: 'always',

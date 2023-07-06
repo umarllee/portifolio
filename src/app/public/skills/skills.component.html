@@ -4,21 +4,116 @@
             Skills
         </h2>
 
-        <div class="row mt-2 about-con">
-
+        <div class="row mt-2 about-con" *ngFor="let item of skills">
+            <h4 style="font-weight: 500; margin: 0;">{{item.name}} ( <span
+                    style="color: darkorange;">{{item.percent}}</span> )</h4>
             <ol class="progress-bar ms-3">
-                <li class="is-complete"><span></span></li>  
-                <li class="is-complete"><span></span></li>  
-                <li class="is-complete"><span></span></li>
-                <li class="is-complete"><span> </span></li>  
-                <li class="is-complete"><span></span></li>
-                <li class="is-complete"><span></span></li>
-                <li class="is-active"><span> </span></li>  
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>  
-              </ol>
-
+                <li *ngFor="let points of item.point; let i = index"
+                    [ngClass]="{'is-complete ': (points.isActive == true && i != (item.countActive -1)) , 'is-active': i == (item.countActive -1)}">
+                    <span></span>
+                </li>
+            </ol>
         </div>
+
+        <div class="row" style="margin: 0;">
+            <div class="col-lg-3" >
+                <div class="container">
+                    <div class="card">
+                        <div class="box">
+                            <div class="percent">
+                                <!-- <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="setMyStyles()" cx="70" cy="70" r="70"></circle>
+                                </svg> -->
+
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="{'stroke-dashoffset': 'calc(440 - (440 * 90) / 100)'}" cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="num">
+                                    <h2>90<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h2 class="text">Angular material</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3" >
+                <div class="container">
+                    <div class="card">
+                        <div class="box">
+                            <div class="percent">
+                                <!-- <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="setMyStyles()" cx="70" cy="70" r="70"></circle>
+                                </svg> -->
+
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="{'stroke-dashoffset': 'calc(440 - (440 * 70) / 100)'}" cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="num">
+                                    <h2>70<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h2 class="text">RxJs</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3" >
+                <div class="container">
+                    <div class="card">
+                        <div class="box">
+                            <div class="percent">
+                                <!-- <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="setMyStyles()" cx="70" cy="70" r="70"></circle>
+                                </svg> -->
+
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="{'stroke-dashoffset': 'calc(440 - (440 * 50) / 100)'}" cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="num">
+                                    <h2>50<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h2 class="text">NgRx Store</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3" >
+                <div class="container">
+                    <div class="card">
+                        <div class="box">
+                            <div class="percent">
+                                <!-- <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="setMyStyles()" cx="70" cy="70" r="70"></circle>
+                                </svg> -->
+
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle [ngStyle]="{'stroke-dashoffset': 'calc(440 - (440 * 65) / 100)'}" cx="70" cy="70" r="70"></circle>
+                                </svg>
+                                <div class="num">
+                                    <h2>65<span>%</span></h2>
+                                </div>
+                            </div>
+                            <h2 class="text">Ng2 Chart</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>

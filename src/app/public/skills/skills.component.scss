@@ -11,7 +11,7 @@
     flex: 2;
     display: flex;
     position: relative;
-    padding: 0 0 14px 0;
+    // padding: 0 0 14px 0;
     font-size: var(--font-size-default);
     line-height: 1.5;
     color: var(--color-green);
@@ -25,16 +25,16 @@
 
 .progress-bar li::before {
     content: "";
-    width: 13px;
-    height: 11px;
+    width: 14px;
+    height: 12px;
     border-radius: 50%;
-    background-color: #a8a8a8;
+    background-color: #b5b5b5;
 }
 
 .progress-bar .is-complete::before {
     content: "";
-    width: 13px;
-    height: 11px;
+    width: 14px;
+    height: 12px;
     border-radius: 50%;
     background-color: #00bd58;
 }
@@ -52,8 +52,8 @@
 .progress-bar li:not(:last-child) span {
     display: inline-block;
     width: 100%;
-    background: #a8a8a8;
-    height: 2px;
+    background: #b5b5b5;
+    height: 3px;
     margin: auto;
 }
 
@@ -63,4 +63,76 @@
     background: #00bd58 !important;
     height: 2px;
     margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+  .percent .num
+{
+  position:absolute;
+  top: -12px;
+    left: 12px;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
+.percent .num h2
+{
+  color:#777;
+  font-weight:700;
+  font-size:40px;
+  transition:0.5s;
+}
+.card:hover .percent .num h2
+{
+  color:#fff;
+  font-size:60px;
+}
+.percent .num h2 span
+{
+  color:#777;
+  font-size:24px;
+  transition:0.5s;
+}
+.card:hover .percent .num h2 span
+{
+  color:#fff;
+}
+
+svg
+{
+  position:relative;
+  width:150px;
+  height:150px;
+  z-index:1000;
+}
+svg circle
+{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:#b5b5b5;
+  stroke-width:10;
+  stroke-linecap:round;
+  transform:translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+  stroke-dasharray:440;
+  stroke-dashoffset:440;
+}
+.card:nth-child(1) svg circle:nth-child(2)
+{
+//   stroke-dashoffset:calc(440 - (440 * 60) / 100);
+  stroke:#00bd58;
 }

@@ -1,18 +1,65 @@
 <div class="cardAnimations ">
-    <div class="row" style="margin: 0;">
-        <h2 class="mt-5 text-start px-4 mt-3 col-lg-12" style="color: darkorange; font-size: 26px; font-weight: 600;">
+    <div class="row py-4" style="margin: 0;">
+        <h2 class="text-start px-4 mt-3 col-lg-12 m-0" style="color: darkorange; font-size: 26px; font-weight: 800;">
             Skills
         </h2>
 
-        <div class="row mt-2 about-con" *ngFor="let item of skills">
-            <h4 style="font-weight: 500; margin: 0;">{{item.name}} ( <span
+        <!-- <div class="row mt-2 about-con" *ngFor="let item of skills">
+            <h4 style="font-weight: 500; margin: 0;"> <img [src]="item.url" width="17" alt=""> {{item.name}} ( <span
                     style="color: darkorange;">{{item.percent}}</span> )</h4>
-            <ol class="progress-bar ms-3">
+            <ol class="progress-bar ms-3 mt-2">
                 <li *ngFor="let points of item.point; let i = index"
                     [ngClass]="{'is-complete ': (points.isActive == true && i != (item.countActive -1)) , 'is-active': i == (item.countActive -1)}">
                     <span></span>
                 </li>
             </ol>
+        </div> -->
+
+        <div class="row " style="margin: 0;">
+            <!-- <div class="col-lg-4 mt-3"  *ngFor="let item of skills">
+                <div class=" mat-elevation-z8 py-3" style="border-radius: 10px;">
+                        <img style="width: 130px;height: 130px; object-fit: contain;" [src]="item.url" alt="">
+                    <h2 class="mt-2 m-0">{{item.name}}</h2>
+                </div>
+            </div> -->
+
+            <div class="mt-4 cards col-lg-4 " *ngFor="let card of skills; let i=index" [@cardFlip]="card.stateName">
+                <div class="face back col-lg-11 ">
+                  <div class="text-end mt-2 col-lg-12" style="padding: 0 10px;">
+                    <svg (click)="cardClicked(i)" [style.color]="card.color" style="cursor: pointer;"
+                      xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-info-circle-fill  ms-2" viewBox="0 0 16 16">
+                      <path 
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                    </svg>
+                  </div>
+      
+                  <div class=" ms-3 d-flex flex-column col-11"  style="cursor: pointer; height: 90px; padding: 0 10px;">
+                    <img style="width: 100px;height: 100px; object-fit: contain; margin: 10px auto 0;" [src]="card.url" alt="">
+      
+                  </div>
+      
+                  <div class="cardTitle mt-4 col-lg-12" >  {{card.name}} </div>
+      
+                </div>
+      
+                <div class="face front col-lg-11 ">
+                  <div class="text-end  mt-2 " >
+                    <svg (click)="cardClicked(i)" [style.color]="card.color" style="cursor: pointer;"
+                      xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-info-circle-fill me-2" viewBox="0 0 16 16">
+                      <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                    </svg>
+                  </div>
+                  <div class="pt-4 ms-3 skill-percent" [style.color]="card.color">
+                   {{card.percent}}
+                  </div>
+                </div>
+      
+      
+              </div>
+            
         </div>
 
 

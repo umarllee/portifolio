@@ -27,12 +27,16 @@
 .list-items{
     cursor: pointer;
     padding: 10px ;
-    color: #7f7f7f;
+    color: #b9b9b9;
     max-width: 90px;
+    font-weight: 600;
 }
 
-.router-link-active{
-    color: #00bd58;
+.router-link-active,
+.router-link-active path {
+    fill: #4498f1;
+    fill: #4498f1;
+    color: #4498f1;
 }
 
 // .name {
@@ -94,12 +98,23 @@
 
 .social-list-item{
     max-width: 50px;
+    margin: 0 10px;
+}
+
+.social-list-item img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 995px) {
     .container-item-links{
         // max-height: 50vh;
     }
+}
 
-
+.dwnld{
+    text-decoration: none;
+    color: #00bd58;
+    font-weight: 500;
 }

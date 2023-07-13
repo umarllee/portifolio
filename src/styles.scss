@@ -5,9 +5,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   // font-family: "Archivo", sans-serif !important;
-  font-family: 'Montserrat', sans-serif !important;
+  // font-family: 'Montserrat', sans-serif !important;
 }
 
 .cdk-global-scrollblock {
@@ -193,7 +193,7 @@
 }
 
 .cardAnimations::-webkit-scrollbar-thumb {
-  background-color: #154d53 !important;
+  background-color: #7baee3 !important;
   border-radius: 3px;
 }
 
@@ -1178,9 +1178,10 @@ td.mat-footer-cell {
 
 
 .cardAnimations{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
   overflow-x: hidden;
   background: #fff;
-  margin: 1.5% 0 0 0;
+  margin: 1.5% 0 1.5% 0;
   overflow-y: auto;
   max-height: 83vh;
   min-height: 83vh;

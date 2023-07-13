@@ -181,21 +181,18 @@
   display: none;
 }
 
-.line-container::-webkit-scrollbar,
-.menu-container::-webkit-scrollbar {
+.cardAnimations::-webkit-scrollbar{
   width: 7px;
   height: 7px;
 }
 
-.line-container::-webkit-scrollbar-track,
-.menu-container::-webkit-scrollbar-track {
+.cardAnimations::-webkit-scrollbar-track {
   box-shadow: none;
   border-radius: 3px;
   background-color: #fff;
 }
 
-.line-container::-webkit-scrollbar-thumb,
-.menu-container::-webkit-scrollbar-thumb {
+.cardAnimations::-webkit-scrollbar-thumb {
   background-color: #154d53 !important;
   border-radius: 3px;
 }
@@ -1126,6 +1123,13 @@ input::-webkit-inner-spin-button {
     max-width: 450px;
     margin-top: 95px;
   }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .cardAnimations{
+    border-radius: 8px; 
+  }
 }
 
 th.mat-header-cell,
@@ -1174,12 +1178,15 @@ td.mat-footer-cell {
 
 
 .cardAnimations{
+  overflow-x: hidden;
   background: #fff;
   margin: 1.5% 0 0 0;
-  height: 97%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  animation: 0.8s cubic-bezier(.25, 1, .30, 1) card-in-right both;
+  overflow-y: auto;
+  max-height: 83vh;
+  min-height: 83vh;
+  border-top-right-radius: 8px; 
+  border-bottom-right-radius: 8px; 
+  animation: 0.8s cubic-bezier(0.25, 1, 0.3, 1) card-in-right both;
 }
 
 @keyframes card-in-right {

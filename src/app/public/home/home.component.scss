@@ -1,6 +1,6 @@
 .common-container {
     height: 86vh;
-    align-items: center;
+    // align-items: center;
     // width: 95%;
     // position: absolute;
     // background: #fff; 
@@ -8,13 +8,12 @@
 
 .container-item {
     border-radius: 8px;
-    
+    height: 100%;
 }
 
 .container-item2 {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    
 }
 
 .list-container{
@@ -22,12 +21,14 @@
     list-style: none;
     background: white;
     border-radius: 8px;
+    min-width: 73px;
 }
 
 .list-items{
     cursor: pointer;
     padding: 10px ;
     color: #7f7f7f;
+    max-width: 90px;
 }
 
 .router-link-active{
@@ -85,6 +86,20 @@
 
 
 .imgLogo {
-    height: 70%;
+    height: 100%;
+    width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 99%, 0 90%);
+    object-fit: cover !important;
+}
+
+.social-list-item{
+    max-width: 50px;
+}
+
+@media only screen and (max-width: 995px) {
+    .container-item-links{
+        // max-height: 50vh;
+    }
+
+
 }

@@ -172,6 +172,7 @@
   transition: 0.3s;
   overflow: auto;
   height: 100vh;
+  background: #dbdbdb;
 }
 
 .main::-webkit-scrollbar {
@@ -193,7 +194,7 @@
 .main-item {
   height: 100%;
   padding: 25px;
-  background:#dbdbdb;
+  // background:#dbdbdb;
   // background-image: url(../../assets/bg4.png);
   // background-size: cover;
   // background-repeat: no-repeat;

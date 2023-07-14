@@ -1,21 +1,61 @@
 <div class="cardAnimations ">
 
     <div class="row py-4" style="margin: 0;">
-        <form>
-            <div class="row" style="margin: 0;">
-                <div class="col-lg-4">
-                    <div class="field">
-                        <label for="fin" title="FİN" data-title="FİN"></label>
-                        <input type="text" id="fin" name="fin" placeholder="FİN" />
-                      </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="field">
-                        <label for="info" title="Direktor haqqında məlumat" data-title="Direktor haqqında məlumat"></label>
-                        <textarea  id="info" placeholder="İnfo"></textarea>
-                        <!-- <small class="text-danger " style="display: inline-block;">*Required field</small> -->
+        <h2 class="text-start px-4 mt-3 col-lg-12 m-0 modul-headers">
+            Contact
+        </h2>
+
+        <form class="p-0 mt-4" [formGroup]="formGroup">
+            <div class="row p-0" style="margin: 0;">
+                <div class="col-lg-12 row mt-2 p-0" style="margin: 0;">
+                    <div class="col-lg-6">
+                        <div class="field">
+                            <label for="name" title="Name" data-title="Name"></label>
+                            <input formControlName="name" type="text" id="name" name="name" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="field">
+                            <label for="surname" title="Surname" data-title="Surname"></label>
+                            <input  formControlName="surname"  type="text" id="surname" name="surname" placeholder="Surname" />
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-lg-12 row mt-2 p-0" style="margin: 0;">
+                    <div class="col-lg-6 ">
+                        <div class="field">
+                            <label for="email" title="Email" data-title="Email"></label>
+                            <input formControlName="email" type="text" id="email" name="email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="field">
+                            <label for="phone" title="Phone" data-title="Phone"></label>
+                            <input formControlName="phone" type="text" id="phone" name="phone" placeholder="Phone" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 row mt-2 p-0" style="margin: 0;">
+                    <div class="col-lg-6">
+                        <div class="field">
+                            <label for="info" title="Message" data-title="Message"></label>
+                            <textarea formControlName="message" id="message" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-3">
+                        <ngx-captcha [config]="captchaConfig"></ngx-captcha>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 p-0 justify-content-end row" style="margin: 0;">
+                    <div class="col-lg-6 px-4">
+                       <span [ngClass]="{'text-danger': isCaptcha == false , 'text-success': isCaptcha == true}">{{captchaText}}</span>
+                        <button class="save mt-2" (click) = "save()">Send message</button>
+                    </div>
+                </div>
+
             </div>
         </form>
     </div>

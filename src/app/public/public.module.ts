@@ -36,6 +36,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { NgxCaptchaModule } from '@binssoft/ngx-captcha';
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import { ContactComponent } from './contact/contact.component';
     MatTreeModule,
     MatTooltipModule,
     BrowserAnimationsModule,
+    NgxCaptchaModule
   ]
 })
 export class PublicModule { }

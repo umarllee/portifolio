@@ -182,8 +182,8 @@
 }
 
 .cardAnimations::-webkit-scrollbar{
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
 }
 
 .cardAnimations::-webkit-scrollbar-track {
@@ -193,7 +193,7 @@
 }
 
 .cardAnimations::-webkit-scrollbar-thumb {
-  background-color: #7baee3 !important;
+  background-color: #b1b1b1 !important;
   border-radius: 3px;
 }
 
@@ -358,226 +358,18 @@ table {
   display: none !important;
 }
 
-.next {
-  width: 3rem !important;
-  height: 3rem;
-  margin-top: 10px;
-  border: none;
-  outline: none;
-  border-radius: 50px;
-  padding: 10px 35px;
-  color: white;
-  background: #1a9cc9;
-  // clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 0 48%, 0% 0%);
-}
-
-.addList {
-  width: 2.5rem !important;
-  height: 2.5rem;
-  border: none;
-  outline: none;
-  border-radius: 50px;
-  padding: 5px 0px 5px 5px;
-  color: white;
-  background: #1a9cc9;
-  // clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 0 48%, 0% 0%);
-}
-
-.addListUpdate {
-  width: 3rem !important;
-  height: 3rem;
-  margin-top: 10px;
-  border: none;
-  outline: none;
-  border-radius: 50px;
-  padding: 10px 35px;
-  color: white;
-  background: darkorange;
-  // clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 0 48%, 0% 0%);
-}
-
-.new {
-  width: 2rem !important;
-  height: 2rem;
-  margin-top: 10px;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  color: white;
-  background: #1a9cc9;
-}
-
-.newBtn {
-  width: 40% !important;
-  height: 2.3rem;
-  margin-top: -10px;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  color: white;
-  background: #1a9cc9;
-}
-
-.cancel {
-  width: 3rem !important;
-  height: 3rem;
-  margin-left: 2%;
-  margin-top: 10px;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  padding: 10px 30px;
-  background-color: rgb(255, 70, 70);
-  color: #fff;
-  // clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 13% 100%, 0% 50%, 12% 0);
-}
-
-.cancelBtn {
-  width: 40% !important;
-  height: 2.3rem;
-  margin-top: -10px;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  background-color: rgb(255, 70, 70);
-  color: #fff;
-  // clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 13% 100%, 0% 50%, 12% 0);
-}
-
 .save {
-  width: 3rem !important;
-  height: 3rem;
-  margin-top: 10px;
   border: none;
   outline: none;
-  border-radius: 50%;
-  padding: 10px 35px;
-  color: white;
-  background: #8fc93a;
-}
-
-.notificationAlert {
-  // content: ' ';
-
-  position: absolute;
-  background-color: red;
+  width: 100%;
+  height: 40px;
+  background: #00bd58;
   color: #fff;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 50%;
-  margin-top: 0.4%;
-  margin-left: 0.3%;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 10px;
 }
 
-ul {
-  padding: 0rem !important;
-}
-
-.notificationMenu {
-  overflow-y: auto;
-  max-height: 38vh;
-  font-size: 16px;
-  border: 1px solid #d4d4d4;
-  background-color: rgb(255, 255, 255);
-  animation: notification 1s;
-  transform: translateY(8px);
-}
-
-@keyframes notification {
-  0% {
-    // height: 0px;
-    opacity: 0.7;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    // height: 38vh;
-    transform: translateY(8px);
-  }
-}
-
-.notificationMenu::-webkit-scrollbar {
-  width: 8px !important;
-  // display: none !important;
-}
-
-.notificationMenu::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
-  border-radius: 5px !important;
-}
-
-.notificationMenu::selection {
-  background-color: #8b8b8b !important;
-  color: white !important;
-}
-
-.notificationMenu::-webkit-scrollbar-thumb {
-  background-color: #8b8b8b !important;
-  border-radius: 5px !important;
-}
-
-.w3-container,
-.w3-panel {
-  padding: 0em 0px;
-}
-
-// .notificItems:nth-child(2n){
-//   background-color: #e4e815;
-// }
-
-.seeNotificCon {
-  cursor: pointer;
-  position: sticky;
-  bottom: 0;
-  height: 3rem;
-  background-color: #eeeeee;
-  border-top: 2px solid hsl(0, 0%, 77%);
-}
-
-.notificItems {
-  border: 1px solid hsl(0, 0%, 82%);
-  background-color: #fff;
-  color: rgb(59, 59, 59);
-}
-
-.notificItems:first-child {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.notificItems:not(:first-child) {
-  // background-color: #eaf2f3d2;
-  margin-top: 3px;
-}
-
-.userMenuPanel {
-  // color: #136481;
-  font-size: 17px;
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  background-color: rgb(248, 248, 248);
-  margin-left: 9%;
-  // margin-top: 2.8rem;
-  transition: 1s;
-  border-radius: 5px;
-  animation: notificationUser 1s;
-  transform: translateY(5rem);
-}
-
-@keyframes notificationUser {
-  0% {
-    // height: 0px;
-    opacity: 0.7;
-    transform: translateY(5.5rem);
-  }
-
-  100% {
-    opacity: 1;
-    // height: 38vh;
-    transform: translateY(5rem);
-  }
-}
 
 ::ng-deep .mat-tree {
   background: #f9fafc;
@@ -683,15 +475,15 @@ textarea::-webkit-scrollbar-thumb:hover {
   .mat-select,
   .mat-datepicker {
     width: 100%;
-    line-height: 30px;
-    height: 32px;
+    line-height: 40px;
+    height: 40px;
     padding: 0 5px;
     box-sizing: border-box;
     background-color: #fdfeff;
     font-size: 15px;
     color: #222;
-    border: 1px solid rgb(37 106 131 / 59%);
-    border-radius: 8px;
+    border: 1px solid rgb(168 168 168 / 59%);
+    border-radius: 10px;
 
     &:focus {
       outline: 0;
@@ -720,13 +512,13 @@ textarea::-webkit-scrollbar-thumb:hover {
     width: 100%;
     // line-height: 39px;
     height: 45px;
-    padding: 0 5px;
+    padding:  5px;
     box-sizing: border-box;
     background-color: #fdfeff;
     font-size: 16px;
     color: #222;
-    border: 1px solid rgb(37 106 131 / 59%);
-    border-radius: 8px;
+    border: 1px solid rgb(168 168 168 / 59%);
+    border-radius: 10px;
 
     &:focus {
       outline: 0;
@@ -842,7 +634,7 @@ textarea::-webkit-scrollbar-thumb:hover {
   font-size: 10px;
   color: #0a5068;
   padding: 2px 6px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   transition: 300ms all;
   border-radius: 5px;
   font-weight: 700;
@@ -869,10 +661,10 @@ textarea::-webkit-scrollbar-thumb:hover {
   top: -15px;
   left: 8px;
   line-height: 10px;
-  font-size: 10px;
-  color: #0a5068;
+  font-size: 13px;
+  color: #00bd58;
   padding: 0px 6px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   transition: 300ms all;
   border-radius: 5px;
   font-weight: 700;
@@ -1209,4 +1001,10 @@ td.mat-footer-cell {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+.modul-headers{
+  color: #696969;
+  font-size: 33px !important;
+  font-weight: 700 !important;
 }

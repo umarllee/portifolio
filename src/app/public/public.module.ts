@@ -37,6 +37,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxCaptchaModule } from '@binssoft/ngx-captcha';
+import { TablesComponent } from './tables/tables.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { NgxCaptchaModule } from '@binssoft/ngx-captcha';
     WorksComponent,
     SkillsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    TablesComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,31 @@
+.cards{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    background: #e8e5e5;
+}
+
+.cards:hover{
+transform: scale(1.04);
+}
+
+.cards h3{
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-pattern{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: -11px;
+    right: -11px;
+}
+
+.card-img path{
+    fill: red;
+    color: red;
+}

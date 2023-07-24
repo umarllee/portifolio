@@ -2,7 +2,7 @@
 
     <div class="row mt-5" style="margin: 0;">
 
-        <div class="col-lg-4 mt-3" *ngFor="let card of projects" >
+        <div class="col-lg-4 mt-3" *ngFor="let card of projects"  [routerLink]="[card.link]" >
             <div class="pb-3 px-2 mat-elevation-z8 cards" [style.Color]="card.color">
                 <div class="card-pattern" [style.background-color]="card.color"></div>
 

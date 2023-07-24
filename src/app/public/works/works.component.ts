@@ -11,17 +11,28 @@ export class WorksComponent {
       url: '../../../assets/projects/table.webp',
       color: 'cornflowerblue',
       title: 'Multifunctional table',
+      link: 'tables'
     },
     {
-      url: '../../../assets/projects/layout.png',
+      url: '../../../assets/projects/illdy.png',
       color: 'darkorange',
-      title: 'Figma layouts',
+      title: 'Cards ui',
+      link: ''
     },
     {
       url: '../../../assets/projects/illdy.png',
       color: '#9fcb42',
       title: 'Illdy prototype',
+      link: ''
     },
+    {
+      url: '../../../assets/projects/layout.png',
+      color: '#8d8ae6',
+      title: 'Figma layouts',
+      link: 'works/landings'
+    },
+    
+   
 
   ];
 

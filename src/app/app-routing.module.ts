@@ -6,6 +6,7 @@ import { SkillsComponent } from './public/skills/skills.component';
 import { AboutComponent } from './public/about/about.component';
 import { WorksComponent } from './public/works/works.component';
 import { ContactComponent } from './public/contact/contact.component';
+import { TablesComponent } from './public/tables/tables.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home/about', pathMatch: 'full' },
@@ -21,7 +22,8 @@ const routes: Routes = [
         children: [
           { path: 'about', component: AboutComponent },
           { path: 'skills', component: SkillsComponent },
-          { path: 'works', component: WorksComponent },
+          { path: 'works', component: WorksComponent, },
+          { path: 'works/tables', component: TablesComponent, },
           { path: 'contact', component: ContactComponent },
         ]
       },
